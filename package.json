@@ -24,7 +24,7 @@
     "react-dom": "18.2.0",
     "react-native": "0.71.8",
     "react-native-config": "^1.5.1",
-    "react-native-dotenv": "^3.4.8"
+    "react-native-dotenv": "^3.4.8",
     "react-native-text-recognition": "^1.0.0",
     "react-native-web": "~0.18.10"
   },

@@ -1,9 +1,7 @@
 {
   "expo": {
-<<<<<<< HEAD
     "name": "bill-in-bytes",
     "slug": "bill-in-bytes",
-=======
     "plugins": [
       [
         "expo-camera",
@@ -12,9 +10,6 @@
         }
       ]
     ],
-    "name": "BillInBytes",
-    "slug": "BillInBytes",
->>>>>>> cc9318cd589cb140f8c0a4495cee615bc6a3d2ed
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
