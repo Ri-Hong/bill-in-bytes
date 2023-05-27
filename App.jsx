@@ -10,6 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import CameraScreen from './screen/Camera.jsx'
 import Landing from './screen/Landingpage.jsx'
+import TextRecognition from './screen/TextRecognition.jsx'
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,12 @@ export default function App() {
       <Stack.Screen 
         name="CameraScreen"
         component={CameraScreen}
+        options={{headerShown: false}}
+      />
+
+      <Stack.Screen 
+        name="TextRecognitionScreen"
+        component={TextRecognition}
         options={{headerShown: false}}
       />
 

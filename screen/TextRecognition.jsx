@@ -1,9 +1,10 @@
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
 import Constants from "expo-constants";
-import ImagePickerComponent from "./ImagePickerComponent.js";
-import callGoogleVisionAsync from "./helperFunctions";
-export default function App() {
+import ImagePickerComponent from "../textRecognition/ImagePickerComponent.js";
+import callGoogleVisionAsync from "../textRecognition/helperFunctions.js";
+
+export default function TextRecognition() {
   return (
     <View style={styles.container}>
       <ImagePickerComponent onSubmit={callGoogleVisionAsync} />
