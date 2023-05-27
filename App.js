@@ -1,4 +1,3 @@
-import * as Permissions from 'expo-permissions';
 import { Camera, CameraType } from 'expo-camera';
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
@@ -9,15 +8,6 @@ export default function App() {
   const [type, setType] = useState(CameraType.back);
   const [status, setStatus] = Camera.useCameraPermissions();
 
-  useEffect(() => {
-    const getCameraPermissions = async () => {
-      const { status } = await Permissions.askAsync(Permissions.CAMERA);
-      setStatus(status);
-    };
-
-    getCameraPermissions();
-  }, []);
-
   const goBack = () => {
     setStartCamera(false);
   }
@@ -25,7 +15,6 @@ export default function App() {
   const takePic = function (){
     
     if (status.granted) {
-      // setType(current => (current === CameraType.back ? CameraType.front : CameraType.back));
       setStartCamera(true);
     } else {
       // Handle permission denied scenario
