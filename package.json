@@ -1,5 +1,5 @@
 {
-  "name": "billinbytes",
+  "name": "bill-in-bytes",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
@@ -10,15 +10,20 @@
   },
   "dependencies": {
     "expo": "~48.0.15",
+    "expo-cli": "^6.3.7",
+    "expo-constants": "^14.2.1",
+    "expo-dev-client": "~2.2.1",
+    "expo-image-picker": "~14.1.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
     "react-native": "0.71.8",
-    "react-native-web": "~0.18.10",
-    "react-dom": "18.2.0",
-    "@expo/webpack-config": "^18.0.1"
+    "react-native-config": "^1.5.1",
+    "react-native-dotenv": "^3.4.8"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "babel-preset-react-native": "^4.0.1",
+    "node-env-run": "^4.0.2"
   },
   "private": true
 }

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "BillInBytes",
-    "slug": "BillInBytes",
+    "name": "bill-in-bytes",
+    "slug": "bill-in-bytes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "rihong.billinbytes"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ri_hong.billinbytes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b6a2388b-ff80-4f81-9249-e5ccf9893e85"
+      }
     }
   }
 }
