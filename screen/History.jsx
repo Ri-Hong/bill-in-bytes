@@ -1,4 +1,4 @@
-import { ScrollView } from "react-native-web";
+import { ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, TouchableOpacity, View, Button, Image, Pressable, ImageBackground } from 'react-native';
 import landingPage from '../assets/landingPage.png';
@@ -9,75 +9,59 @@ import NavScan from '../assets/NavScan.png'
 import NavHistory from '../assets/NavHistory.png'
 import NavProfile from '../assets/NavProfile.png'
 
+import { StateContext } from "../StateContext";
+import { useContext } from 'react';
+
+import totalIcon from '../assets/totalIcon.png'
+import groceryIcon from '../assets/groceryIcon.png'
+import restaurantIcon from '../assets/restaurantIcon.png'
+import retailIcon from '../assets/retailIcon.png'
+import entertainmentIcon from '../assets/entertainmentIcon.png'
+import gasIcon from '../assets/gasIcon.png'
+
+
 export default function History({navigation}) {
+    const { state, setState } = useContext(StateContext);
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             <View style={styles.user_container}>
-                {/* <Image source={require('./my-icon.png')} style={styles.user_image} />  */}
+                <Image source={require('../assets/Vivian.jpeg')} style={styles.user_image} /> 
                 <View style={styles.user_text_container}>
                     <Text style={styles.subheader_text}>Hey!</Text>
                     <Text style={styles.header_text}>Jefferson Chen</Text>
                 </View>
             </View>
 
-            <View style={styles.yourhistory_container}>
-                <Text style={styles.yourHistoryText}>Your History</Text>
-                <View style={styles.list_container}> 
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
+            <View style={styles.transactions_container}>
+            <Text style={styles.yourHistoryText}>Your History</Text>
+                <ScrollView style={styles.yourhistory_container}>
+                    {state.transactions.map((transaction, index) => (
+                            <View key={index} style={styles.transactions_text_container}>
+                            {transaction.category === 'grocery' && (
+                                <Image source={groceryIcon} style={styles.transactions_image} />
+                            )}
+                            {transaction.category === 'restaurant' && (
+                                <Image source={restaurantIcon} style={styles.transactions_image} />
+                            )}
+                            {transaction.category === 'retail' && (
+                                <Image source={retailIcon} style={styles.transactions_image} />
+                            )}
+                            {transaction.category === 'entertainment' && (
+                                <Image source={entertainmentIcon} style={styles.transactions_image} />
+                            )}
+                            {transaction.category === 'gas' && (
+                                <Image source={gasIcon} style={styles.transactions_image} />
+                            )}
 
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-
-
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-
-
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-
-
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-
-
-                </View>
+                            <View style={styles.text_containers}>
+                                <Text style={styles.dior_text}>{transaction.storeName}</Text>
+                                <Text style={styles.transactions_date}>{transaction.date}</Text>
+                            </View>
+                            <Text style={styles.transactions_money}>${transaction.total}</Text>
+                            </View>
+                        ))}
+                </ScrollView>
             </View>
 
 
@@ -129,23 +113,30 @@ export default function History({navigation}) {
         marginRight: 17
     }, 
 
+    subheader_text: {
+        color: '#f1f1f1',
+        fontSize: 16,
+        fontFamily: "Rokkitt",
+    },
+
     header_text: {
         color: '#f1f1f1',
-        fontSize: 20,
-    },
-
-    subheader_text:{
-        color: '#f1f1f1',
-        fontSize: 12,
-    },
-
-    yourhistory_container: {
-
+        fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     yourHistoryText: {
         color: '#f1f1f1',
-        fontSize: 24,
+        fontSize: 30,
+        marginTop: 20,
+        marginBottom: 10,
+        fontFamily: "Rokkitt",
+
+    },
+
+    yourhistory_container: {
+        flexGrow: 1,
+        paddingBottom: 500
     },
 
     list_container: {
@@ -169,8 +160,9 @@ export default function History({navigation}) {
     },
 
     dior_text: {
-        color: '#f1f1f1',
-        fontSize: 20,
+        color: "#f1f1f1",
+        fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     yourhistory_date: {
@@ -209,8 +201,48 @@ export default function History({navigation}) {
         height: 30,
         resizeMode: 'contain',
     },
+    transactions_container: {
+        display: 'flex',
+        flexDirection: 'column',
+        height: 600,
+    },
 
+    transactions_text_container: {
+        display: "flex",
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingVertical: 16,
+        alignItems: "center"
+    },
 
+    text_containers: {
+        display: "flex",
+        flexDirection: 'column',
+        gap: 4,
+        flexGrow: 1,
+        paddingHorizontal: 10
+    },
+
+    transactions_image: {
+        width: 40,
+        height: 40,
+        resizeMode: 'contain',
+        paddingRight: 60
+    },
+
+    transactions_date: {
+        color: "#f1f1f1",
+        opacity: 0.5,
+        fontSize: 16,
+        display: 'flex',
+        flexShrink: 1,
+        fontFamily: "Rokkitt",
+    },
+    transactions_money: {
+        fontSize: 16,
+        color: '#F7B360',
+        fontFamily: "Rokkitt",
+    },
 
 
   });
