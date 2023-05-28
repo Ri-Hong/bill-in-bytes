@@ -14,11 +14,21 @@ import Profile from './screen/Profile.jsx'
 import Sorted from './screen/Sorted.jsx'
 import Sorting from './screen/Sorting.jsx'
 import UnresolvedReceipts from './screen/UnresolvedReceipts.jsx'
-
+import { useFonts } from 'expo-font';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  
+  const [loaded] = useFonts({
+    Rokkitt: require('./assets/fonts/Rokkit-Medium.ttf'),
+  });
+
+  if (!loaded) {
+    return null;
+  }
+
+  
   return (
   <NavigationContainer>
     <Stack.Navigator>

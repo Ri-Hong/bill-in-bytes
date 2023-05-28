@@ -67,6 +67,7 @@ export default function Landing({navigation}) {
     header:{
         color: '#f1f1f1',
         fontSize: 40,
+        fontFamily: "Rokkitt",
 
     },
 
