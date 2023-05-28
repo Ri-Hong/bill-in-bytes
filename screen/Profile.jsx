@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-n
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import landingPage from '../assets/landingPage.png';
 
-export default function Profile() {
+export default function Profile({navigation}) {
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
@@ -73,7 +73,7 @@ export default function Profile() {
                 <View style={styles.camera_container}>
                     <Pressable onPress={() => navigation.navigate("CameraScreen")}> <Image source={require('./my-icon.png')} style={styles.nav_camera}/> </Pressable>
                 </View>
-                <Pressable> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
                 <Pressable onPress={() => navigation.navigate("Profile")}> <Image source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
 
             </View>

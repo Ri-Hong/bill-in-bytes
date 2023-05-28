@@ -3,24 +3,24 @@ import { StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-n
 import { Pressable } from "react-native/types";
 import landingPage from '../assets/landingPage.png';
 
-export default function Sorting() {
+export default function Sorting({navigation}) {
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
-            <Views style={styles.text_container}>
+            <View style={styles.text_container}>
                 <Text style={styles.store_name}>[Store Name]</Text>
                 <Text style={styles.text}>belongs to</Text>
                 <Pressable> <Image source={require('./my-icon.png')} style={styles.restaurantButton}/> </Pressable>
                 <Text style={styles.total}>$124.50</Text>
-            </Views>
+            </View>
 
-            <Views style={styles.button_container}>
+            <View style={styles.button_container}>
                 <Pressable onPress={() => navigation.navigate("Sorting")} style={styles.returnButton}> 
                 <Image source={require('./my-icon.png')} style={styles.returnArrow}/> 
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate("Sorting")} style={styles.button}> <Text style={styles.buttonText}>Sort it!</Text>
+                <Pressable onPress={() => navigation.navigate("Profile")} style={styles.button}> <Text style={styles.buttonText}>Sort it!</Text>
                 </Pressable> 
-            </Views>
+            </View>
         </SafeAreaView>
         
         

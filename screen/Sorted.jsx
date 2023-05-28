@@ -3,26 +3,26 @@ import { StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-n
 import { Pressable } from "react-native/types";
 import landingPage from '../assets/landingPage.png';
 
-export default function Sorted() {
+export default function Sorted({navigation}) {
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
-            <Views style={styles.text_container}>
+            <View style={styles.text_container}>
                 <Text style={styles.store_name}>[Store Name]</Text>
                 <Text style={styles.text}>belongs to</Text>
                 <Text style={styles.restaurant_text}>Restaurant</Text>
                 <TouchableOpacity onPress={() => navigation.navigate("Sorting")} style={styles.wrongButton}> <Text style={styles.wrongText}>It's wrong, let me change it</Text>
                 </TouchableOpacity>
                 <Text style={styles.total}>$124.50</Text>
-            </Views>
+            </View>
 
-            <Views style={styles.button_container}>
+            <View style={styles.button_container}>
                 <Pressable onPress={() => navigation.navigate("CameraScreen")} style={styles.returnButton}> 
                 <Image source={require('./my-icon.png')} style={styles.returnArrow}/> 
                 </Pressable>
                 <Pressable onPress={() => navigation.navigate("Sorting")} style={styles.button}> <Text style={styles.buttonText}>Continue</Text>
                 </Pressable> 
-            </Views>
+            </View>
         </SafeAreaView>
         
         
