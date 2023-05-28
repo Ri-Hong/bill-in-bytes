@@ -24,7 +24,7 @@ export default function Sorting({navigation}) {
             storeName: "Tim Hortons",
             date: "May 22, 2023",
             total: "$5.57",
-            category: "Restaurant"
+            category: "restaurant"
         })
         setState(state);
     }
