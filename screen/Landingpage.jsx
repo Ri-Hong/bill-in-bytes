@@ -28,6 +28,8 @@ export default function Landing({navigation}) {
                 onPress={() => Alert.alert('Button with adjusted color pressed')} 
             /> */}
 
+            
+
 
             
         </SafeAreaView>
