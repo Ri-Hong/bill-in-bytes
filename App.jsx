@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { LogBox } from 'react-native';
 
 import { StateContext, AppProvider } from './StateContext';
 
@@ -23,6 +24,7 @@ export default function App() {
     Rokkitt: require('./assets/fonts/static/Rokkitt-Medium.ttf'),
   });
 
+  LogBox.ignoreAllLogs();//Ignore all log notifications
   if (!loaded) {  
     return null;
   }

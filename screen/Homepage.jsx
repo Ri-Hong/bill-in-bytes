@@ -69,9 +69,11 @@ export default function Homepage({navigation}) {
                     </View>
 
                     <View style={styles.box_container}>
-                        <Image source={UnresolvedReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>2</Text>
-                        <Text style={styles.text_under}>Unresolved</Text>
+                        <Pressable onPress={() => navigation.navigate("UnresolvedReceipts")}>
+                            <Image source={UnresolvedReceipts} style={styles.image_style}/> 
+                            <Text style={styles.number}>2</Text>
+                            <Text style={styles.text_under}>Unresolved</Text>
+                        </Pressable>
                     </View>
                 </View>
             </View>

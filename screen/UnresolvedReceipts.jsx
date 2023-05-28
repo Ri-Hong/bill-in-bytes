@@ -29,58 +29,58 @@ export default function UnresolvedReceipts() {
                 <View style={styles.uRContainer}>
                     <View style={styles.listContainer}>
                         <View style={styles.receipt}>
-                            <Image source={require('../assets/pikachu.jpg')} style={styles.receiptImage} /> 
+                            <Image source={require('../assets/gasIcon.png')} style={styles.receiptImage} /> 
                             <View>
-                                <Text style={styles.dior_text}>Dior</Text>
-                                <Text style={styles.receiptDate}>June 11, 2023</Text>
+                                <Text style={styles.dior_text}>Tesla</Text>
+                                <Text style={styles.receiptDate}>June 28, 2022</Text>
                             </View>
                             <Text style={styles.receiptAmount}>$124.50</Text>
-                            <Image source={require('../assets/pikachu.jpg')} style={styles.BigCheckmark} /> 
+                            <Image source={require('../assets/ResolvedReceipts.png')} style={styles.BigCheckmark} /> 
                         </View>
                         <View>
                             <View style={styles.oweMoneyRow}>
-                                <Image source={require('../assets/Vivian.jpeg')} style={styles.oweMoney} /> 
+                                <Image source={require('../assets/pikachu.jpg')} style={styles.oweMoney} /> 
                                 <Text style={styles.receiptName}>Ri Hong</Text>
                                 <Text style={styles.receiptAmount}>$4.50</Text>
-                                <Image source={require('../assets/pikachu.jpg')} style={styles.SmallerCheckmark} />
+                                <Image source={require('../assets/ResolvedReceipts.png')} style={styles.SmallerCheckmark} />
                             </View>
                             <View style={styles.oweMoneyRow}>
-                                <Image source={require('../assets/Vivian.jpeg')} style={styles.oweMoney} /> 
-                                <Text style={styles.receiptName}>Ri Hong</Text>
+                                <Image source={require('../assets/elonmusk.jpg')} style={styles.oweMoney} /> 
+                                <Text style={styles.receiptName}>Elon Musk</Text>
                                 <Text style={styles.receiptAmount}>$120.00</Text>
-                                <Image source={require('../assets/pikachu.jpg')} style={styles.SmallerCheckmark} />
+                                <Image source={require('../assets/ResolvedReceipts.png')} style={styles.SmallerCheckmark} />
                             </View>
                         </View>
                     </View>
 
                     <View style={styles.listContainer}>
                         <View style={styles.receipt}>
-                            <Image source={require('../assets/pikachu.jpg')} style={styles.receiptImage} /> 
+                            <Image source={require('../assets/retailIcon.png')} style={styles.receiptImage} /> 
                             <View>
-                                <Text style={styles.dior_text}>Dior</Text>
-                                <Text style={styles.receiptDate}>June 11, 2023</Text>
+                                <Text style={styles.dior_text}>Target</Text>
+                                <Text style={styles.receiptDate}>May 11, 2023</Text>
                             </View>
-                            <Text style={styles.receiptAmount}>$244.50</Text>
-                            <Image source={require('../assets/pikachu.jpg')} style={styles.BigCheckmark} /> 
+                            <Text style={styles.receiptAmount}>$216.97</Text>
+                            <Image source={require('../assets/ResolvedReceipts.png')} style={styles.BigCheckmark} /> 
                         </View>
                         <View>
                             <View style={styles.oweMoneyRow}>
-                            <Image source={require('../assets/Vivian.jpeg')} style={styles.oweMoney} /> 
+                            <Image source={require('../assets/Among-Us-Logo.png')} style={styles.oweMoney} /> 
+                                <Text style={styles.receiptName}>Sebastian</Text>
+                                <Text style={styles.receiptAmount}>$120.00</Text>
+                                <Image source={require('../assets/ResolvedReceipts.png')} style={styles.SmallerCheckmark} />
+                            </View>
+                            <View style={styles.oweMoneyRow}>
+                            <Image source={require('../assets/bill.jpg')} style={styles.oweMoney} /> 
+                                <Text style={styles.receiptName}>Bill Gates</Text>
+                                <Text style={styles.receiptAmount}>$92.47</Text>
+                                <Image source={require('../assets/ResolvedReceipts.png')} style={styles.SmallerCheckmark} />
+                            </View>
+                            <View style={styles.oweMoneyRow}>
+                            <Image source={require('../assets/pikachu.jpg')} style={styles.oweMoney} /> 
                                 <Text style={styles.receiptName}>Ri Hong</Text>
                                 <Text style={styles.receiptAmount}>$4.50</Text>
-                                <Image source={require('../assets/pikachu.jpg')} style={styles.SmallerCheckmark} />
-                            </View>
-                            <View style={styles.oweMoneyRow}>
-                            <Image source={require('../assets/Vivian.jpeg')} style={styles.oweMoney} /> 
-                                <Text style={styles.receiptName}>Ri Hong</Text>
-                                <Text style={styles.receiptAmount}>$120.00</Text>
-                                <Image source={require('../assets/pikachu.jpg')} style={styles.SmallerCheckmark} />
-                            </View>
-                            <View style={styles.oweMoneyRow}>
-                            <Image source={require('../assets/Vivian.jpeg')} style={styles.oweMoney} /> 
-                                <Text style={styles.receiptName}>Ri Hong</Text>
-                                <Text style={styles.receiptAmount}>$120.00</Text>
-                                <Image source={require('../assets/pikachu.jpg')} style={styles.SmallerCheckmark} />
+                                <Image source={require('../assets/ResolvedReceipts.png')} style={styles.SmallerCheckmark} />
                             </View>
                         </View>
                     </View>
@@ -141,7 +141,8 @@ export default function UnresolvedReceipts() {
 
     subheader_text: {
         color: '#F1F1F1',
-        fontSize: 12
+        fontSize: 16,
+        fontFamily: "Rokkitt",
     },
 
     oweMoneyRow: {
@@ -151,7 +152,8 @@ export default function UnresolvedReceipts() {
 
     header_text: {
         color: '#F1F1F1',
-        fontSize: 20
+        fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     unresolvedReceipts_container: {
@@ -160,7 +162,8 @@ export default function UnresolvedReceipts() {
 
     uRText: {
         color: '#F1F1F1',
-        fontSize: 24
+        fontSize: 30,
+        fontFamily: "Rokkitt",
     },
 
     uRContainer: {
@@ -173,22 +176,24 @@ export default function UnresolvedReceipts() {
 
     receipt: {
         flexDirection: 'row',
+        marginTop: 20
     },
 
     receiptImage: {
         width: 50,
         height: 50,
-        borderRadius: 50,
         marginRight: 20
     },
 
     dior_text: {
-        fontSize: 20,
+        fontSize: 24,
+        fontFamily: "Rokkitt",
         color: '#F1F1F1'
     },
 
     receiptDate: {
-        fontSize: 12,
+        fontSize: 16,
+        fontFamily: "Rokkitt",
         color: '#F1F1F1',
         opacity: 0.5,
     },
@@ -211,10 +216,13 @@ export default function UnresolvedReceipts() {
 
     receiptName: {
         color: '#F1F1F1',
-        fontSize: 16
+        fontSize: 20,
+        fontFamily: "Rokkitt",
     },
 
     receiptAmount: {
+        fontFamily: "Rokkitt",
+        fontSize: 16,
         color: '#F7B360',
         position: 'absolute',
         right: 40

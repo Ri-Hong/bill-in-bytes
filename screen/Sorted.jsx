@@ -15,24 +15,19 @@ export default function Sorted({navigation}) {
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             <View style={styles.text_container}>
-                <Text style={styles.store_name}>Store Name</Text>
+                <Text style={styles.store_name}>Tim Hortons</Text>
                 <Text style={styles.text}>belongs to</Text>
                 <Text style={styles.restaurant_text}>Restaurant</Text>
                 <TouchableOpacity onPress={() => navigation.navigate("Sorting")} style={styles.wrongButton}> 
                     <Text style={styles.wrongText}>It's wrong, let me change it</Text>
                 </TouchableOpacity>
-                <Text style={styles.total}>$124.50</Text>
+                <Text style={styles.total}>$5.57</Text>
             </View>
 
-            <View style={styles.nav_bar}>  
-                <Pressable onPress={() => navigation.navigate("Homepage")}><Image source={NavHome} style={styles.nav_icon}/></Pressable>
-                <Image source={NavCalendar} style={styles.nav_icon}/>
-                <View style={styles.camera_container}>
-                    <Pressable onPress={() => navigation.navigate("CameraScreen")}><Image source={NavScan} style={styles.nav_icon}/></Pressable>    
-                </View>
-                <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
-                <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
-
+            <View style={styles.button_container}>
+                <Pressable style={styles.returnButton} onPress={() => navigation.navigate("CameraScreen")}><Image source={backArrow} style={styles.returnArrow}/></Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.navigate("Sorting")}><Text style={styles.buttonText}>Continue</Text></Pressable>
+                
             </View>
         </SafeAreaView>
         
@@ -150,29 +145,6 @@ export default function Sorted({navigation}) {
         fontSize: 20,
         fontFamily: "Rokkitt",
 
-    },
-
-    nav_bar: {
-        display: 'flex',
-        flexDirection: 'row',
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: "space-between",
-        paddingHorizontal: 30,
-        paddingBottom: 50,
-        alignItems: 'flex-end',
-        borderTopWidth: 1,
-        borderTopColor: "#f1f1f1",
-        height: 100,
-        backgroundColor: "#16191D"
-    },
-
-    nav_icon: {
-        width: 30,
-        height: 30,
-        resizeMode: 'contain',
     },
 
 
