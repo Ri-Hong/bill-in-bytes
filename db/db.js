@@ -2,6 +2,7 @@
 export class Receipt {
     store;
     date;
+    totalPrice;
     itemsList = [
         {
             itemName: "",
@@ -9,7 +10,6 @@ export class Receipt {
         }
     ]
 }
-
 
 export const receipts = [];
 
@@ -27,6 +27,10 @@ export const getDate = function(id) {
 
 export const getStore = function(id) {
     return receipts[id].store;
+}
+
+export const getTotalPrice = function(id) {
+    return receipts[id].totalPrice;
 }
 
 export const getItem = function(receiptId, itemId) {
