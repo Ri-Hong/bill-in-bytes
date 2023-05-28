@@ -19,7 +19,7 @@ import statsBackgroundTransparent from '../assets/statsTransparent.png'
 
 
 
-export default function Homepage() {
+export default function Profile({navigation}) {
     return(
         <SafeAreaView style={styles.main_container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
@@ -90,8 +90,8 @@ export default function Homepage() {
                 <View style={styles.camera_container}>
                     <Image source={NavScan} style={styles.nav_icon}/>
                 </View>
-                <Image source={NavHistory} style={styles.nav_icon}/>
-                <Image source={NavProfile} style={styles.nav_icon}/>
+                <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("Profile")}> <Image source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
 
             </View>
         </SafeAreaView>
