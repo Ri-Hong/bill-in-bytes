@@ -15,13 +15,13 @@ export default function Sorted({navigation}) {
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             <View style={styles.text_container}>
-                <Text style={styles.store_name}>Store Name</Text>
+                <Text style={styles.store_name}>Tim Hortons</Text>
                 <Text style={styles.text}>belongs to</Text>
                 <Text style={styles.restaurant_text}>Restaurant</Text>
                 <TouchableOpacity onPress={() => navigation.navigate("Sorting")} style={styles.wrongButton}> 
                     <Text style={styles.wrongText}>It's wrong, let me change it</Text>
                 </TouchableOpacity>
-                <Text style={styles.total}>$124.50</Text>
+                <Text style={styles.total}>$5.57</Text>
             </View>
 
             <View style={styles.button_container}>

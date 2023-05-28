@@ -11,15 +11,32 @@ import NavScan from '../assets/NavScan.png'
 import NavHistory from '../assets/NavHistory.png'
 import NavProfile from '../assets/NavProfile.png'
 
+import React, { useContext } from 'react';
+
+import { StateContext } from '../StateContext';
+
+
 export default function Sorting({navigation}) {
+    const { state, setState } = useContext(StateContext);
+
+    const addThing = () => {
+        StateContext = StateContext.push({
+            storeName: "Tim Hortons",
+            date: "May 22, 2023",
+            total: "$5.57",
+            category: "Restaurant"
+        })
+        setState(StateContext);
+    }
+
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             <View style={styles.text_container}>
-                <Text style={styles.store_name}>[Store Name]</Text>
+                <Text style={styles.store_name}>Tim Hortons</Text>
                 <Text style={styles.text}>belongs to</Text>
                 <Image source={changeToRestaurant} style={styles.restaurantButton}/> 
-                <Text style={styles.total}>$124.50</Text>
+                <Text style={styles.total}>$5.57</Text>
             </View>
 
             <View style={styles.nav_bar}>  
