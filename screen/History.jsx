@@ -201,21 +201,7 @@ export default function History({navigation}) {
         borderTopWidth: 1,
         borderTopColor: "#f1f1f1",
         height: 100,
-        backgroundColor: "#16191D"
-        display: 'flex',
-        flexDirection: 'row',
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        right: 0,
-        justifyContent: "space-between",
-        paddingHorizontal: 30,
-        paddingBottom: 50,
-        alignItems: 'flex-end',
-        borderTopWidth: 1,
-        borderTopColor: "#f1f1f1",
-        height: 100,
-        backgroundColor: "#16191D"
+        backgroundColor: "#16191D",
     },
 
     nav_icon: {
