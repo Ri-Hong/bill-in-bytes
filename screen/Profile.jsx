@@ -90,8 +90,8 @@ export default function Profile({navigation}) {
                 <View style={styles.camera_container}>
                     <Image source={NavScan} style={styles.nav_icon}/>
                 </View>
-                <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
-                <Pressable onPress={() => navigation.navigate("Profile")}> <Image source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
+                <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
 
             </View>
         </SafeAreaView>

@@ -16,12 +16,6 @@ import UnresolvedReceipts from './screen/UnresolvedReceipts.jsx'
 
 // Text Recognition
 import TextRecognition from './screen/TextRecognition.jsx'
-import History from './screen/History.jsx'
-import Profile from './screen/Profile.jsx'
-import Sorted from './screen/Sorted.jsx'
-import Sorting from './screen/Sorting.jsx'
-import UnresolvedReceipts from './screen/UnresolvedReceipts.jsx'
-
 
 const Stack = createNativeStackNavigator();
 
@@ -42,24 +36,6 @@ export default function App() {
       /> */}
       
       {/* <Stack.Screen 
-        name="Sorted"
-        component={Sorted}
-        options={{headerShown: false}}
-      /> */}
-      
-      <Stack.Screen 
-        name="Profile"
-        component={Profile}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen 
-        name="Sorting"
-        component={Sorting}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen 
         name="CameraScreen"
         component={CameraScreen}
         options={{headerShown: false}}
@@ -74,12 +50,6 @@ export default function App() {
       <Stack.Screen 
         name="History"
         component={History}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen 
-        name="Profile"
-        component={Profile}
         options={{headerShown: false}}
       />
 
@@ -99,9 +69,7 @@ export default function App() {
         name="UnresolvedReceipts"
         component={UnresolvedReceipts}
         options={{headerShown: false}}
-      />
-      
-
+      /> */}
 
       
     </Stack.Navigator>

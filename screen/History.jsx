@@ -1,7 +1,6 @@
 import { ScrollView } from "react-native-web";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, TouchableOpacity, View, Button, Image, Pressable, ImageBackground } from 'react-native';
-import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import landingPage from '../assets/landingPage.png';
 
 export default function History({navigation}) {
