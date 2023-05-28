@@ -9,7 +9,7 @@ import NavScan from '../assets/NavScan.png'
 import NavHistory from '../assets/NavHistory.png'
 import NavProfile from '../assets/NavProfile.png'
 
-export default function UnresolvedReceipts() {
+export default function UnresolvedReceipts({navigation}) {
     return(
         
         
@@ -98,9 +98,6 @@ export default function UnresolvedReceipts() {
 
             </View>
 
-
-
-            
         </SafeAreaView>
         
         
@@ -201,6 +198,7 @@ export default function UnresolvedReceipts() {
     BigCheckmark: {
         width: 30,
         height: 30,
+        resizeMode: 'contain',
         borderRadius: 30,
         position: 'absolute',
         right: 0
@@ -233,7 +231,9 @@ export default function UnresolvedReceipts() {
         height: 24,
         borderRadius: 24,
         position: 'absolute',
-        right: 0
+        right: 0,
+        resizeMode: 'contain',
+
     },
 
     nav_bar: {

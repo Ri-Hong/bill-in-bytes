@@ -69,7 +69,7 @@ export default function Homepage({navigation}) {
                     </View>
 
                     <View style={styles.box_container}>
-                        <Pressable onPress={() => navigation.navigate("UnresolvedReceipts")}>
+                        <Pressable onPress={() => navigation.navigate("UnresolvedReceipts")} style={styles.uReceipts}>
                             <Image source={UnresolvedReceipts} style={styles.image_style}/> 
                             <Text style={styles.number}>2</Text>
                             <Text style={styles.text_under}>Unresolved</Text>
@@ -355,6 +355,12 @@ export default function Homepage({navigation}) {
         alignItems: "center",
         justifyContent: 'center',
         marginBottom: 10,
+    },
+    uReceipts: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 8,
     }
 
 
