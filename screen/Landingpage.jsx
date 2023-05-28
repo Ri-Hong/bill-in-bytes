@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Alert, StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 
-export default function Landing() {
+export default function Landing({navigation}) {
     return(
         
         
@@ -18,7 +18,7 @@ export default function Landing() {
                 <Text style={styles.text}>Control your expenses and streamline your way to managing your finances. Financed for you!</Text>
             </View>
 
-            <Pressable style={styles.button} onPress={() => Alert.alert('Button with adjusted color pressed')}>
+            <Pressable style={styles.button} onPress={() => navigation.navigate("Homepage")}>
                 <Text style={styles.buttonText}>Next</Text>
             </Pressable>
 {/*            
@@ -27,6 +27,8 @@ export default function Landing() {
                 color = "#F7B05A"
                 onPress={() => Alert.alert('Button with adjusted color pressed')} 
             /> */}
+
+            
 
 
             
