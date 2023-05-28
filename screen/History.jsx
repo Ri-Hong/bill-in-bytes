@@ -202,24 +202,27 @@ export default function History({navigation}) {
         borderTopColor: "#f1f1f1",
         height: 100,
         backgroundColor: "#16191D"
+        display: 'flex',
+        flexDirection: 'row',
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        justifyContent: "space-between",
+        paddingHorizontal: 30,
+        paddingBottom: 50,
+        alignItems: 'flex-end',
+        borderTopWidth: 1,
+        borderTopColor: "#f1f1f1",
+        height: 100,
+        backgroundColor: "#16191D"
     },
 
-
-
+    nav_icon: {
+        width: 30,
+        height: 30,
+        resizeMode: 'contain',
     },
-
-
-    camera_container: {
-        backgroundColor: '#f1f1f1',
-        borderRadius: 100,
-        width: 70,
-        height: 70,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: 'center',
-        marginBottom: 10,
-    },
-
 
 
 

@@ -17,6 +17,13 @@ import IconRetail from '../assets/IconRetail.png'
 import Vivian from '../assets/Vivian.jpeg'
 import statsBackgroundTransparent from '../assets/statsTransparent.png'
 
+import totalIcon from '../assets/totalIcon.png'
+import groceryIcon from '../assets/groceryIcon.png'
+import restaurantIcon from '../assets/restaurantIcon.png'
+import retailIcon from '../assets/retailIcon.png'
+import entertainmentIcon from '../assets/entertainmentIcon.png'
+import gasIcon from '../assets/gasIcon.png'
+
 
 export default function Profile({navigation}) {
     return(

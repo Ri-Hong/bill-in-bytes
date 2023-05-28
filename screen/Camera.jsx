@@ -1,12 +1,10 @@
 import * as Permissions from 'expo-permissions';
 import { Camera, CameraType } from 'expo-camera';
-import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
-export default function CameraScreen() {
-  const [startCamera,setStartCamera] = React.useState(false)
+export default function CameraScreen({navigation}) {
   const [type, setType] = useState(CameraType.back);
   const [status, setStatus] = Camera.useCameraPermissions();
 
@@ -19,47 +17,18 @@ export default function CameraScreen() {
     getCameraPermissions();
   }, []);
 
-  const goBack = () => {
-    setStartCamera(false);
-  }
-
-  const takePic = function (){
-    setStartCamera(true); // 💀💀💀💀
-  }
-
-  const analyzeText = () => {
-
-  }
-
   return (
     <View style={styles.container}>
-      {startCamera ? (
-        <Camera  style={styles.camera}
+      <Camera  style={styles.camera}
         ref={(r) => {
           camera = r
         }} type={type}> 
-        <TouchableOpacity style={styles.button} onPress={goBack}>
-            <Text style={styles.text}>Back</Text>
-          </TouchableOpacity>
 
           <TouchableOpacity
-            onPress={analyzeText}
+            onPress={() => {navigation.navigate("Sorted")}}
             style={styles.cameraButton}
             />
       </Camera>
-      ) :
-      (
-        <><Text>Hihi magic placeholder text something something 🙃🙃🙃🙃🙃🙃🙃🙃🙃🙃</Text><TouchableOpacity
-            onPress={takePic}
-            style={styles.button}
-          >
-            <Text
-              style={styles.text}
-            >
-              Scan receipt
-            </Text>
-          </TouchableOpacity><StatusBar style="auto" /></>
-      )}
       
     </View>
   );
