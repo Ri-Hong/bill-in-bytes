@@ -5,7 +5,7 @@ import landingPage from '../assets/landingPage.png';
 import changeToRestaurant from '../assets/changeToRestaurant.png'
 import backArrow from '../assets/backArrow.png';
 
-export default function Sorting() {
+export default function Sorting({navigation}) {
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
@@ -20,8 +20,7 @@ export default function Sorting() {
                 <Pressable onPress={() => navigation.navigate("Sorting")} style={styles.returnButton}> 
                 <Image source={backArrow} style={styles.returnArrow}/> 
                 </Pressable>
-                <Pressable onPress={() => navigation.navigate("Sorting")} style={styles.button}> 
-                    <Text style={styles.buttonText}>Sort it!</Text>
+                <Pressable onPress={() => navigation.navigate("Profile")} style={styles.button}> <Text style={styles.buttonText}>Sort it!</Text>
                 </Pressable> 
             </View>
         </SafeAreaView>

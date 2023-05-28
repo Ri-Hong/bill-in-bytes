@@ -4,7 +4,7 @@ import { StyleSheet, Text, TouchableOpacity, View, Button, Image, Pressable, Ima
 import landingPage from '../assets/landingPage.png';
 import backArrow from '../assets/backArrow.png';
 
-export default function Sorted() {
+export default function Sorted({navigation}) {
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>

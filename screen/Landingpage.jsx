@@ -1,6 +1,6 @@
 import { ScrollView } from "react-native-web";
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Alert, StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable, navigation } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 
 export default function Landing({navigation}) {
@@ -74,6 +74,7 @@ export default function Landing({navigation}) {
         color: '#f1f1f1',
         opacity: 0.5,
         fontSize: 16,
+        fontFamily: 'Rokkitt'
     },
        
     button: {
