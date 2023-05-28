@@ -3,7 +3,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Alert, StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 
-export default function Landing() {
+export default function UnresolvedReceipts() {
     return(
         
         
@@ -60,7 +60,7 @@ export default function Landing() {
                     <Pressable onPress={() => navigation.navigate("CameraScreen")}> <Image source={require('./my-icon.png')} style={styles.nav_camera}/> </Pressable>
                 </View>
                 <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
-                <Pressable onPress={() => navigation.navigate("Profile")}> <Image source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("Profile")}> <Image   source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
 
             </View>
 

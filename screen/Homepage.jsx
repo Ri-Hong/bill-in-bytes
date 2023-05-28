@@ -1,5 +1,6 @@
 import { ScrollView } from "react-native";
-import { StyleSheet, Text, TouchableOpacity, View, Button, Image, SafeAreaView, ImageBackground } from 'react-native';
+import { SafeAreaView } from "react-native-safe-area-context";
+import { StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 import statsBackground from '../assets/Stats.png'
 
@@ -15,7 +16,7 @@ import NavProfile from '../assets/NavProfile.png'
 
 import IconRetail from '../assets/IconRetail.png'
 
-export default function Homepage() {
+export default function Homepage({navigation}) {
     return(
         <SafeAreaView style={styles.main_container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
@@ -118,13 +119,13 @@ export default function Homepage() {
             </View>
                 
             <View style={styles.nav_bar}>  
-                <Image source={NavHome} style={styles.nav_icon}/>
+            <Pressable onPress={() => navigation.navigate("Homepage")}><Image source={NavHome} style={styles.nav_icon}/></Pressable>
                 <Image source={NavCalendar} style={styles.nav_icon}/>
                 <View style={styles.camera_container}>
-                    <Image source={NavScan} style={styles.nav_icon}/>
+                    <Pressable onPress={() => navigation.navigate("CameraScreen")}><Image source={NavScan} style={styles.nav_icon}/></Pressable>    
                 </View>
-                <Image source={NavHistory} style={styles.nav_icon}/>
-                <Image source={NavProfile} style={styles.nav_icon}/>
+                <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/> </Pressable> 
+                <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
 
             </View>
         </SafeAreaView>
