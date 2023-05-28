@@ -3,6 +3,12 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Alert, StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 
+import NavHome from '../assets/NavHome.png'
+import NavCalendar from '../assets/NavCalendar.png'
+import NavScan from '../assets/NavScan.png'
+import NavHistory from '../assets/NavHistory.png'
+import NavProfile from '../assets/NavProfile.png'
+
 export default function UnresolvedReceipts() {
     return(
         
@@ -11,7 +17,7 @@ export default function UnresolvedReceipts() {
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             
             <View style={styles.user_container}>
-                <Image source={require('./my-icon.png')} style={styles.user_image} /> 
+                {/* <Image source={require('./my-icon.png')} style={styles.user_image} />  */}
                 <View style={styles.user_text_container}>
                     <Text style={styles.subheader_text}>Hey!</Text>
                     <Text style={styles.header_text}>Jefferson Chen</Text>
@@ -23,44 +29,44 @@ export default function UnresolvedReceipts() {
                 <View style={styles.uRContainer}>
                     <View style={styles.listContainer}>
                         <View style={styles.receipt}>
-                            <Image source={require('./my-icon.png')} style={styles.receiptImage} /> 
+                            {/* <Image source={require('./my-icon.png')} style={styles.receiptImage} />  */}
                             <Text style={styles.dior_text}>Dior</Text>
                             <Text style={styles.receiptDate}>June 11, 2023</Text>
-                            <Image source={require('./my-icon.png')} style={styles.BigCheckmark} /> 
+                            {/* <Image source={require('./my-icon.png')} style={styles.BigCheckmark} />  */}
                         </View>
                         <Text style={styles.receiptName}>Ri Hong</Text>
                         <Text style={styles.receiptAmount}>$4.50</Text>
-                        <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} />
+                        {/* <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} /> */}
                         <Text style={styles.receiptName}>Ri Hong</Text>
                         <Text style={styles.receiptAmount}>$120.00</Text>
-                        <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} />
+                        {/* <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} /> */}
                     </View>
 
                     <View>
                         <View style={styles.receipt}>
-                            <Image source={require('./my-icon.png')} style={styles.receiptImage} />  
+                            {/* <Image source={require('./my-icon.png')} style={styles.receiptImage} />   */}
                             <Text style={styles.dior_text}>Dior</Text>
                             <Text style={styles.receiptDate}>June 11, 2023</Text>
-                            <Image source={require('./my-icon.png')} style={styles.BigCheckmark} /> 
+                            {/* <Image source={require('./my-icon.png')} style={styles.BigCheckmark} />  */}
                         </View>
                             <Text style={styles.receiptName}>Ri Hong</Text>
                             <Text style={styles.receiptAmount}>$4.50</Text>
-                            <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} />
+                            {/* <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} /> */}
                             <Text style={styles.receiptName}>Ri Hong</Text>
                             <Text style={styles.receiptAmount}>$120.00</Text>
-                            <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} />
+                            {/* <Image source={require('./my-icon.png')} style={styles.SmallerCheckmark} /> */}
                      </View>
                 </View>
             </View>
 
             <View style={styles.nav_bar}>  
-                <Pressable onPress={() => navigation.navigate("Homepage")}> <Image source={require('./my-icon.png')} style={styles.nav_home}/> </Pressable>
-                <Pressable> <Image source={require('./my-icon.png')} style={styles.nav_calendar}/> </Pressable> 
+                <Pressable onPress={() => navigation.navigate("Homepage")}><Image source={NavHome} style={styles.nav_icon}/></Pressable>
+                <Image source={NavCalendar} style={styles.nav_icon}/>
                 <View style={styles.camera_container}>
-                    <Pressable onPress={() => navigation.navigate("CameraScreen")}> <Image source={require('./my-icon.png')} style={styles.nav_camera}/> </Pressable>
+                    <Pressable onPress={() => navigation.navigate("CameraScreen")}><Image source={NavScan} style={styles.nav_icon}/></Pressable>    
                 </View>
-                <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
-                <Pressable onPress={() => navigation.navigate("Profile")}> <Image   source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
+                <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
 
             </View>
 

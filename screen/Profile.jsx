@@ -18,7 +18,6 @@ import Vivian from '../assets/Vivian.jpeg'
 import statsBackgroundTransparent from '../assets/statsTransparent.png'
 
 
-
 export default function Profile({navigation}) {
     return(
         <SafeAreaView style={styles.main_container}>
