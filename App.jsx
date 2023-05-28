@@ -10,6 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import CameraScreen from './screen/Camera.jsx'
 import Landing from './screen/Landingpage.jsx'
+import Home from './screen/Homepage.jsx'
 import TextRecognition from './screen/TextRecognition.jsx'
 
 const Stack = createNativeStackNavigator();
@@ -20,9 +21,15 @@ export default function App() {
     <Stack.Navigator>
      
       
-      <Stack.Screen 
+      {/* <Stack.Screen 
         name="Landingpage"
         component={Landing}
+        options={{headerShown: false}}
+      /> */}
+      
+      <Stack.Screen 
+        name="Homepage"
+        component={Home}
         options={{headerShown: false}}
       />
 

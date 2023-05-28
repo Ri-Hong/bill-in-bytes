@@ -48,7 +48,7 @@ export default function Landing() {
     }, 
     
     container: {
-        paddingVertical: 40,
+        paddingVertical: 50,
         paddingHorizontal: 30,
         width: '100%',
         height: '100%',
