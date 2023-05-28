@@ -1,3 +1,6 @@
+import React, { useContext } from 'react';
+import { StateContext } from '../StateContext';
+
 import { ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, TouchableOpacity, View, Button, Image, ImageBackground, Pressable } from 'react-native';
@@ -16,7 +19,17 @@ import NavProfile from '../assets/NavProfile.png'
 
 import IconRetail from '../assets/IconRetail.png'
 
+import totalIcon from '../assets/totalIcon.png'
+import groceryIcon from '../assets/groceryIcon.png'
+import restaurantIcon from '../assets/restaurantIcon.png'
+import retailIcon from '../assets/retailIcon.png'
+import entertainmentIcon from '../assets/entertainmentIcon.png'
+import gasIcon from '../assets/gasIcon.png'
+
+
 export default function Homepage({navigation}) {
+    const { state, setState } = useContext(StateContext);
+
     return(
         <SafeAreaView style={styles.main_container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
@@ -62,60 +75,32 @@ export default function Homepage({navigation}) {
                 
 
                 <ScrollView contentContainerStyle={styles.all_transactions}>
-                    <View style={styles.transactions_text_container}>
+                    {state.transactions.map((transaction, index) => (
+                        <View key={index} style={styles.transactions_text_container}>
+                        {transaction.category === 'grocery' && (
+                            <Image source={groceryIcon} style={styles.transactions_image} />
+                        )}
+                        {transaction.category === 'restaurant' && (
+                            <Image source={restaurantIcon} style={styles.transactions_image} />
+                        )}
+                        {transaction.category === 'retail' && (
+                            <Image source={retailIcon} style={styles.transactions_image} />
+                        )}
+                        {transaction.category === 'entertainment' && (
+                            <Image source={entertainmentIcon} style={styles.transactions_image} />
+                        )}
+                        {transaction.category === 'gas' && (
+                            <Image source={gasIcon} style={styles.transactions_image} />
+                        )}
 
-                        <Image source={IconRetail} style={styles.transactions_image}/>
                         <View style={styles.text_containers}>
-                            <Text style={styles.dior_text}>Dior</Text>
-                            <Text style={styles.transactions_date}>June 11, 2023</Text>
+                            <Text style={styles.dior_text}>{transaction.storeName}</Text>
+                            <Text style={styles.transactions_date}>{transaction.date}</Text>
                         </View>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-
-                    <View style={styles.divider}></View>
-
-                    <View style={styles.transactions_text_container}>
-                        <Image source={IconRetail} style={styles.transactions_image}/>
-                        <View style={styles.text_containers}>
-                            <Text style={styles.dior_text}>Dior</Text>
-                            <Text style={styles.transactions_date}>June 11, 2023</Text>
+                        <Text style={styles.transactions_money}>${transaction.total}</Text>
                         </View>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-
-                    <View style={styles.divider}></View>
-
-                    <View style={styles.transactions_text_container}>
-                        <Image source={IconRetail} style={styles.transactions_image}/>
-                        <View style={styles.text_containers}>
-                            <Text style={styles.dior_text}>Dior</Text>
-                            <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        </View>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-
-                    <View style={styles.divider}></View>
-
-                    <View style={styles.transactions_text_container}>
-                        <Image source={IconRetail} style={styles.transactions_image}/>
-                        <View style={styles.text_containers}>
-                            <Text style={styles.dior_text}>Dior</Text>
-                            <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        </View>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-
-                    <View style={styles.divider}></View>
-
-                    <View style={styles.transactions_text_container}>
-                        <Image source={IconRetail} style={styles.transactions_image}/>
-                        <View style={styles.text_containers}>
-                            <Text style={styles.dior_text}>Dior</Text>
-                            <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        </View>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-                </ScrollView>
+                    ))}
+                    </ScrollView>
             </View>
                 
             <View style={styles.nav_bar}>  
@@ -186,7 +171,7 @@ export default function Homepage({navigation}) {
         color: '#f1f1f1',
         fontSize: 30,
         marginTop: 20,
-        marginBottom: 0,
+        marginBottom: 10,
         fontFamily: "Rokkitt",
 
     },
@@ -296,8 +281,10 @@ export default function Homepage({navigation}) {
     },
 
     transactions_image: {
-        width: 65,
-        height: 65,
+        width: 40,
+        height: 40,
+        resizeMode: 'contain',
+        paddingRight: 60
     },
 
     dior_text: {
