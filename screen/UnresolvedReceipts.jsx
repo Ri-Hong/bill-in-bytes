@@ -9,8 +9,6 @@ import NavScan from '../assets/NavScan.png'
 import NavHistory from '../assets/NavHistory.png'
 import NavProfile from '../assets/NavProfile.png'
 
-import { ri } from "../data";
-
 export default function UnresolvedReceipts() {
     return(
         
