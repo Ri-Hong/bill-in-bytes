@@ -87,7 +87,7 @@ export default function UnresolvedReceipts() {
                 </View>
             </View>
 
-            {/* <View style={styles.nav_bar}>  
+            <View style={styles.nav_bar}>  
                 <Pressable onPress={() => navigation.navigate("Homepage")}><Image source={NavHome} style={styles.nav_icon}/></Pressable>
                 <Image source={NavCalendar} style={styles.nav_icon}/>
                 <View style={styles.camera_container}>
@@ -96,7 +96,7 @@ export default function UnresolvedReceipts() {
                 <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
                 <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
 
-            </View> */}
+            </View>
 
 
 
@@ -229,32 +229,27 @@ export default function UnresolvedReceipts() {
     },
 
     nav_bar: {
-
+        display: 'flex',
+        flexDirection: 'row',
+        position: "absolute",
+        bottom: 0,
+        left: 0,
+        right: 0,
+        justifyContent: "space-between",
+        paddingHorizontal: 30,
+        paddingBottom: 50,
+        alignItems: 'flex-end',
+        borderTopWidth: 1,
+        borderTopColor: "#f1f1f1",
+        height: 100,
+        backgroundColor: "#16191D"
     },
 
-    nav_home: {
-
+    nav_icon: {
+        width: 30,
+        height: 30,
+        resizeMode: 'contain',
     },
-
-    nav_calendar: {
-
-    },
-
-    camera_container: {
-
-    },
-
-    nav_camera: {
-
-    },
-
-    nav_clock: {
-
-    },
-
-    nav_user: {
-
-    }
 
   });
   
