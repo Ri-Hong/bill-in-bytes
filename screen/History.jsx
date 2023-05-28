@@ -1,4 +1,5 @@
 import { ScrollView } from "react-native-web";
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, TouchableOpacity, View, Button, Image, Pressable, ImageBackground } from 'react-native';
 import landingPage from '../assets/landingPage.png';
@@ -28,50 +29,61 @@ export default function History({navigation}) {
                         {/* <Image style={styles.historyImage}></Image> */}
                         <Text style={styles.dior_text}>Dior</Text>
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
                     </View>
-                    
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
-                    
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
                     </View>
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
                         <Text style={styles.dior_text}>Dior</Text>
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
+                    </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
                     </View>
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
                         <Text style={styles.dior_text}>Dior</Text>
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
+                    </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
                     </View>
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
                         <Text style={styles.dior_text}>Dior</Text>
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
                     </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
+                    </View>
+
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
                         <Text style={styles.dior_text}>Dior</Text>
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                        <Text style={styles.yourhistory_total}>$124.50</Text>
                     </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
+                    </View>
+
+
+                    <View style={styles.singleitem_container}>
+                        {/* <Image style={styles.historyImage}></Image> */}
+                        <Text style={styles.dior_text}>Dior</Text>
+                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
+                    </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
+                    </View>
+
+
+                    <View style={styles.singleitem_container}>
+                        {/* <Image style={styles.historyImage}></Image> */}
+                        <Text style={styles.dior_text}>Dior</Text>
+                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
+                    </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
+                    </View>
+
 
                 </View>
             </View>
@@ -96,25 +108,43 @@ export default function History({navigation}) {
   };
 
   const styles = StyleSheet.create({
+
+    backgroudImage: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        resizeMode: "cover"
+    }, 
     
     container:{
-
+        paddingVertical: 50,
+        paddingHorizontal: 30,
+        width: '100%',
+        height: '100%',
     },
 
     user_container: {
-
+        flexDirection: "row",
+        paddingBottom: 30
     },
 
     user_image: {
-
+        width: 43,
+        height: 43,
+        borderRadius: 50,
+        marginRight: 17
     }, 
 
     header_text: {
-
+        color: '#f1f1f1',
+        fontSize: 20,
     },
 
     subheader_text:{
-
+        color: '#f1f1f1',
+        fontSize: 12,
     },
 
     yourhistory_container: {
@@ -122,7 +152,8 @@ export default function History({navigation}) {
     },
 
     yourHistoryText: {
-
+        color: '#f1f1f1',
+        fontSize: 24,
     },
 
     list_container: {
@@ -130,23 +161,38 @@ export default function History({navigation}) {
     },
 
     singleitem_container: {
-
+        flexDirection: "row",
+        borderBottomWidth: 1,
+        borderColor: '#F1F1F144',
+        marginTop: 15,
+        alignContent: 'space-between',
+        padding: 10,
     },
 
     historyImage: {
-
+        width: 50,
+        height: 50,
+        borderRadius: 50,
+        marginRight: 15
     },
 
     dior_text: {
-
+        color: '#f1f1f1',
+        fontSize: 20,
     },
 
     yourhistory_date: {
-
+        color: '#f1f1f1',
+        opacity: 0.5,
+        fontSize: 12,
     },
 
     yourhistory_total: {
-
+        color: '#F7B360',
+        fontSize: 12,
+        right: 10,
+        position: 'absolute',
+        top: 30
     },
 
     nav_bar: {
