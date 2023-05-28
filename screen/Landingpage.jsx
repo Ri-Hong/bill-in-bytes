@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native-web";
-import { StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-native';
+import { Alert, StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-native';
 
 export default function Landing() {
     return(
