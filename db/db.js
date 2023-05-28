@@ -3,6 +3,7 @@ export class Receipt {
     store;
     date;
     totalPrice;
+    category;
     itemsList = [
         {
             itemName: "",
@@ -29,6 +30,10 @@ export const getStore = function(id) {
     return receipts[id].store;
 }
 
+export const getCategory = function(id) {
+    return receipts[id].category;
+}
+
 export const getTotalPrice = function(id) {
     return receipts[id].totalPrice;
 }
@@ -51,6 +56,16 @@ export const getAllOnDate = function(date) {
     ret = []
     for (receipt in receipts) {
         if (receipt.date === date) {
+            ret.push(receipt)
+        }
+    }
+    return ret;
+}
+
+export const getAllFromCategory = function(category) {
+    ret = []
+    for (receipt in receipts) {
+        if (receipt.category === category) {
             ret.push(receipt)
         }
     }
