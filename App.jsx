@@ -2,11 +2,15 @@ import React from 'react';
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-
+// Pages
 import CameraScreen from './screen/Camera.jsx'
 import Landing from './screen/Landingpage.jsx'
 import Home from './screen/Homepage.jsx'
 import Sorting from './screen/Sorting.jsx'
+import Profile from './screen/Profile.jsx'
+
+
+// Text Recognition
 import TextRecognition from './screen/TextRecognition.jsx'
 
 const Stack = createNativeStackNavigator();
@@ -27,6 +31,12 @@ export default function App() {
         options={{headerShown: false}}
       /> */}
       
+      <Stack.Screen 
+        name="Profile"
+        component={Profile}
+        options={{headerShown: false}}
+      />
+
       <Stack.Screen 
         name="Sorting"
         component={Sorting}
