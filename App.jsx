@@ -20,19 +20,19 @@ export default function App() {
         name="Landingpage"
         component={Landing}
         options={{headerShown: false}}
-      />
+      /> */}
       
-      <Stack.Screen 
+      {/* <Stack.Screen 
         name="Homepage"
         component={Home}
         options={{headerShown: false}}
       /> */}
       
-      <Stack.Screen 
+      {/* <Stack.Screen 
         name="Sorted"
         component={Sorted}
         options={{headerShown: false}}
-      />
+      /> */}
       
       <Stack.Screen 
         name="Sorting"
