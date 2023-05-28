@@ -69,19 +69,22 @@ export default function Sorting({navigation}) {
     store_name: {
         color: '#f1f1f1',
         textAlign: "center",
-        fontSize: 40
+        fontSize: 40,
+        fontFamily: "Rokkitt",
     },
 
     text: {
         color: '#f1f1f1',
         textAlign: "center",
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: "Rokkitt",
     },
 
     restaurant_text: {
         color: '#f1f1f1',
         textAlign: "center",
-        fontSize: 40
+        fontSize: 40,
+        fontFamily: "Rokkitt",
 
     },
 
@@ -101,6 +104,7 @@ export default function Sorting({navigation}) {
         textAlign: "center",
         fontSize: 40,
         marginTop: 40,
+        fontFamily: "Rokkitt",
     },
 
     button_container:{
@@ -141,7 +145,8 @@ export default function Sorting({navigation}) {
     buttonText: {  
         color: '#1f1f1f',
         textAlign: "center",
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: "Rokkitt",
 
     },
 

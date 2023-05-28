@@ -22,7 +22,7 @@ export default function App() {
     Rokkitt: require('./assets/fonts/static/Rokkitt-Medium.ttf'),
   });
 
-  if (!loaded) {
+  if (!loaded) {  
     return null;
   }
 

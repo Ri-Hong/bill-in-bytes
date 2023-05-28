@@ -173,11 +173,13 @@ export default function Homepage({navigation}) {
     subheader_text: {
         color: '#f1f1f1',
         fontSize: 16,
+        fontFamily: "Rokkitt",
     },
 
     header_text: {
         color: '#f1f1f1',
         fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     text_header: {
@@ -185,6 +187,7 @@ export default function Homepage({navigation}) {
         fontSize: 30,
         marginTop: 20,
         marginBottom: 0,
+        fontFamily: "Rokkitt",
 
     },
 
@@ -207,11 +210,13 @@ export default function Homepage({navigation}) {
     stats_money: {
         color: '#1f1f1f',
         fontSize: 40,
+        fontFamily: "Rokkitt",
     },
 
     stats_your_spendings: {
         color: '#1f1f1f',
         fontSize: 16,
+        fontFamily: "Rokkitt",
     },
 
     timing_container: {
@@ -258,12 +263,14 @@ export default function Homepage({navigation}) {
         color: '#f1f1f1',
         fontSize: 24,
         lineHeight: 30,
+        fontFamily: "Rokkitt",
     },
 
     text_under: {
         color: '#f1f1f1',
         fontSize: 16,
         lineHeight: 16,
+        fontFamily: "Rokkitt",
     },
 
     transactions_container: {
@@ -296,13 +303,14 @@ export default function Homepage({navigation}) {
     dior_text: {
         color: "#f1f1f1",
         fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     divider: {
         width:'100%',
         height: 0.5,
         backgroundColor : '#f1f1f1',
-        opacity: 0.25
+        opacity: 0.25,
     },
 
     transactions_date: {
@@ -311,11 +319,13 @@ export default function Homepage({navigation}) {
         fontSize: 16,
         display: 'flex',
         flexShrink: 1,
+        fontFamily: "Rokkitt",
     },
 
     transactions_money: {
         fontSize: 16,
-        color: '#F7B360'
+        color: '#F7B360',
+        fontFamily: "Rokkitt",
     },
 
     nav_bar: {
