@@ -1,5 +1,4 @@
 import { ScrollView } from "react-native-web";
-import { ImageBackground, StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StyleSheet, Text, TouchableOpacity, View, Button, Image, Pressable, ImageBackground } from 'react-native';
 import landingPage from '../assets/landingPage.png';
@@ -31,7 +30,6 @@ export default function History({navigation}) {
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
                     <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
@@ -39,7 +37,6 @@ export default function History({navigation}) {
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
                     <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
@@ -47,7 +44,6 @@ export default function History({navigation}) {
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
                     <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
 
                     <View style={styles.singleitem_container}>
                         {/* <Image style={styles.historyImage}></Image> */}
@@ -55,16 +51,6 @@ export default function History({navigation}) {
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
                     <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
-
-
-                    <View style={styles.singleitem_container}>
-                        {/* <Image style={styles.historyImage}></Image> */}
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
-                    </View>
-                    <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
 
 
                     <View style={styles.singleitem_container}>
@@ -73,7 +59,6 @@ export default function History({navigation}) {
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
                     <Text style={styles.yourhistory_total}>$124.50</Text>
-                    </View>
 
 
                     <View style={styles.singleitem_container}>
@@ -82,7 +67,14 @@ export default function History({navigation}) {
                         <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
                     <Text style={styles.yourhistory_total}>$124.50</Text>
+
+
+                    <View style={styles.singleitem_container}>
+                        {/* <Image style={styles.historyImage}></Image> */}
+                        <Text style={styles.dior_text}>Dior</Text>
+                        <Text style={styles.yourhistory_date}>June 11, 2023</Text>
                     </View>
+                    <Text style={styles.yourhistory_total}>$124.50</Text>
 
 
                 </View>
