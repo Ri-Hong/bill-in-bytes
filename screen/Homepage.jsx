@@ -17,7 +17,7 @@ import NavScan from '../assets/NavScan.png'
 import NavHistory from '../assets/NavHistory.png'
 import NavProfile from '../assets/NavProfile.png'
 
-import IconRetail from '../assets/IconRetail.png'
+import Vivian from '../assets/Vivian.jpeg'
 
 import totalIcon from '../assets/totalIcon.png'
 import groceryIcon from '../assets/groceryIcon.png'
@@ -30,12 +30,18 @@ import gasIcon from '../assets/gasIcon.png'
 export default function Homepage({navigation}) {
     const { state, setState } = useContext(StateContext);
 
+    // Calculate total spendings
+    const totalSpendings = state.transactions.reduce(
+        (total, transaction) => total + transaction.total,
+        0
+    );
+
     return(
         <SafeAreaView style={styles.main_container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             <View style={styles.user_container}>
-                <View style={styles.user_image}></View>
-                {/* <Image source={landingPage} style={styles.user_image} />  */}
+                {/* <View style={styles.user_image}></View> */}
+                <Image source={Vivian} style={styles.user_image} /> 
                 <View style={styles.user_text_container}>
                     <Text style={styles.subheader_text}>Hey!</Text>
                     <Text style={styles.header_text}>Jefferson Chen</Text>
@@ -46,7 +52,7 @@ export default function Homepage({navigation}) {
                 <Text style={styles.text_header}>Your Stats</Text>
                 <View style={styles.container}>
                     <Image style={styles.stats_background} source={statsBackground}/>
-                    <Text style={styles.stats_money}>$25,402.49</Text>
+                    <Text style={styles.stats_money}>${totalSpendings.toFixed(2)}</Text>
                     <Text style={styles.stats_your_spendings}>Your Spendings</Text>
                 </View>
                 <View style={styles.timing_container}>
