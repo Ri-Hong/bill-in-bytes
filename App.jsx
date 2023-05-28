@@ -6,8 +6,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CameraScreen from './screen/Camera.jsx'
 import Landing from './screen/Landingpage.jsx'
 import Home from './screen/Homepage.jsx'
-import Sorting from './screen/Sorting.jsx'
-import Sorted from './screen/Sorted.jsx'
 import TextRecognition from './screen/TextRecognition.jsx'
 import History from './screen/History.jsx'
 import Profile from './screen/Profile.jsx'
@@ -28,17 +26,17 @@ export default function App() {
         options={{headerShown: false}}
       /> */}
       
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="Homepage"
         component={Home}
         options={{headerShown: false}}
-      /> */}
+      />
       
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="Sorted"
         component={Sorted}
         options={{headerShown: false}}
-      /> */}
+      />
       
       <Stack.Screen 
         name="Sorting"
@@ -67,18 +65,6 @@ export default function App() {
       <Stack.Screen 
         name="Profile"
         component={Profile}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen 
-        name="Sorted"
-        component={Sorted}
-        options={{headerShown: false}}
-      />
-
-      <Stack.Screen 
-        name="Sorting"
-        component={Sorting}
         options={{headerShown: false}}
       />
 

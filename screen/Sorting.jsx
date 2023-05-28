@@ -5,6 +5,12 @@ import landingPage from '../assets/landingPage.png';
 import changeToRestaurant from '../assets/changeToRestaurant.png'
 import backArrow from '../assets/backArrow.png';
 
+import NavHome from '../assets/NavHome.png'
+import NavCalendar from '../assets/NavCalendar.png'
+import NavScan from '../assets/NavScan.png'
+import NavHistory from '../assets/NavHistory.png'
+import NavProfile from '../assets/NavProfile.png'
+
 export default function Sorting({navigation}) {
     return(
         <SafeAreaView style={styles.container}>
@@ -16,12 +22,15 @@ export default function Sorting({navigation}) {
                 <Text style={styles.total}>$124.50</Text>
             </View>
 
-            <View style={styles.button_container}>
-                <Pressable onPress={() => navigation.navigate("Sorting")} style={styles.returnButton}> 
-                <Image source={backArrow} style={styles.returnArrow}/> 
-                </Pressable>
-                <Pressable onPress={() => navigation.navigate("Profile")} style={styles.button}> <Text style={styles.buttonText}>Sort it!</Text>
-                </Pressable> 
+            <View style={styles.nav_bar}>  
+                <Pressable onPress={() => navigation.navigate("Homepage")}><Image source={NavHome} style={styles.nav_icon}/></Pressable>
+                <Image source={NavCalendar} style={styles.nav_icon}/>
+                <View style={styles.camera_container}>
+                    <Pressable onPress={() => navigation.navigate("CameraScreen")}><Image source={NavScan} style={styles.nav_icon}/></Pressable>    
+                </View>
+                <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
+                <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
+
             </View>
         </SafeAreaView>
         
