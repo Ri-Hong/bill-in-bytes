@@ -14,13 +14,11 @@ export default function App() {
   return (
   <NavigationContainer>
     <Stack.Navigator>
-
-      
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="Landingpage"
         component={Landing}
         options={{headerShown: false}}
-      /> */}
+      />
       
       <Stack.Screen 
         name="Homepage"
@@ -41,7 +39,6 @@ export default function App() {
       />
 
       
-
     </Stack.Navigator>
 
   </NavigationContainer>
