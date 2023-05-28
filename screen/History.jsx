@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native-web";
-import { ImageBackground, SafeAreaView, StyleSheet, Text, TouchableOpacity, Pressable, View, Button, Image } from 'react-native';
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import landingPage from '../assets/landingPage.png';
