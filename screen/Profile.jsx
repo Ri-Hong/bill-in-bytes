@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native";
-import { StyleSheet, Text, TouchableOpacity, View, Button, Image, SafeAreaView, ImageBackground } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Pressable, Button, Image, SafeAreaView, ImageBackground } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 import statsBackground from '../assets/Stats.png'
 

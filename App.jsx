@@ -5,6 +5,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CameraScreen from './screen/Camera.jsx'
 import Landing from './screen/Landingpage.jsx'
 import Home from './screen/Homepage.jsx'
+import History from './screen/History.jsx'
+import Sorted from './screen/Sorted.jsx'
+import Sorting from './screen/Sorting.jsx'
+import Profile from './screen/Profile.jsx'
+import UnresolvedReceipts from './screen/UnresolvedReceipts.jsx'
+
 import TextRecognition from './screen/TextRecognition.jsx'
 
 const Stack = createNativeStackNavigator();
@@ -13,11 +19,6 @@ export default function App() {
   return (
   <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen 
-        name="History"
-        component={History}
-        options={{headerShown: false}}
-      />
       <Stack.Screen 
         name="Landingpage"
         component={Landing}
@@ -30,7 +31,7 @@ export default function App() {
         options={{headerShown: false}}
       />
       
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="CameraScreen"
         component={CameraScreen}
         options={{headerShown: false}}
@@ -61,10 +62,16 @@ export default function App() {
       />
 
       <Stack.Screen 
+        name="Profile"
+        component={Profile}
+        options={{headerShown: false}}
+      />
+
+      <Stack.Screen 
         name="UnresolvedReceipts"
         component={UnresolvedReceipts}
         options={{headerShown: false}}
-      /> */}
+      />
 
       
     </Stack.Navigator>
