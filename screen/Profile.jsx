@@ -84,10 +84,10 @@ export default function Profile({navigation}) {
             </View>
                 
             <View style={styles.nav_bar}>  
-                <Image source={NavHome} style={styles.nav_icon}/>
-                <Image source={NavCalendar} style={styles.nav_icon}/>
+                <Pressable onPress={() => navigation.navigate("Homepage")}><Image source={NavHome} style={styles.nav_icon}/></Pressable>
+                <Pressable onPress={() => navigation.navigate("Calendar")}><Image source={NavCalendar} style={styles.nav_icon}/></Pressable>
                 <View style={styles.camera_container}>
-                    <Image source={NavScan} style={styles.nav_icon}/>
+                    <Pressable onPress={() => navigation.navigate("CameraScreen")}><Image source={NavScan} style={styles.nav_icon}/></Pressable>
                 </View>
                 <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
                 <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
@@ -138,11 +138,13 @@ export default function Profile({navigation}) {
     subheader_text: {
         color: '#f1f1f1',
         fontSize: 16,
+        fontFamily: "Rokkitt",
     },
 
     header_text: {
         color: '#f1f1f1',
         fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     text_header: {
@@ -150,7 +152,7 @@ export default function Profile({navigation}) {
         fontSize: 24,
         marginTop: 20,
         marginBottom: 0,
-
+        fontFamily: "Rokkitt",
     },
 
     stats_background: {
@@ -198,21 +200,25 @@ export default function Profile({navigation}) {
     stats_money: {
         color: '#1f1f1f',
         fontSize: 40,
+        fontFamily: "Rokkitt",
     },
 
     stats_your_spendings: {
         color: '#1f1f1f',
         fontSize: 16,
+        fontFamily: "Rokkitt",
     },
 
     stats_money_lite: {
         color: '#F1F1F1',
         fontSize: 40,
+        fontFamily: "Rokkitt",
     },
 
     stats_your_spendings_lite: {
         color: '#F1F1F1',
         fontSize: 16,
+        fontFamily: "Rokkitt",
     },
 
     timing_container: {
@@ -259,12 +265,14 @@ export default function Profile({navigation}) {
         color: '#f1f1f1',
         fontSize: 16,
         lineHeight: 18,
+        fontFamily: "Rokkitt",
     },
 
     text_under: {
         color: '#f1f1f1',
         fontSize: 12,
         lineHeight: 12,
+        fontFamily: "Rokkitt",
     },
 
     transactions_container: {
@@ -297,6 +305,7 @@ export default function Profile({navigation}) {
     dior_text: {
         color: "#f1f1f1",
         fontSize: 24,
+        fontFamily: "Rokkitt",
     },
 
     divider: {
@@ -316,7 +325,8 @@ export default function Profile({navigation}) {
 
     transactions_money: {
         fontSize: 16,
-        color: '#F7B360'
+        color: '#F7B360',
+        fontFamily: "Rokkitt",
     },
 
     nav_bar: {

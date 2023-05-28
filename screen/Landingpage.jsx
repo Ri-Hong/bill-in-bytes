@@ -67,6 +67,7 @@ export default function Landing({navigation}) {
     header:{
         color: '#f1f1f1',
         fontSize: 40,
+        fontFamily: "Rokkitt",
 
     },
 
@@ -74,7 +75,7 @@ export default function Landing({navigation}) {
         color: '#f1f1f1',
         opacity: 0.5,
         fontSize: 16,
-        fontFamily: 'Rokkitt'
+        fontFamily: 'Rokkitt',
     },
        
     button: {
@@ -93,6 +94,7 @@ export default function Landing({navigation}) {
     buttonText: {
         color: '#16191D',
         fontSize: 20,
+        fontFamily: "Rokkitt",
     }
 
   });
