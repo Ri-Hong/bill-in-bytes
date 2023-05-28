@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { ScrollView } from "react-native";
 import { StyleSheet, Text, TouchableOpacity, View, Pressable, Button, Image, SafeAreaView, ImageBackground } from 'react-native';
 import landingPage from '../assets/landingPage.png'
@@ -26,6 +27,30 @@ import gasIcon from '../assets/gasIcon.png'
 
 
 export default function Profile({navigation}) {
+    const [selectedButton, setSelectedButton] = useState('weekly');
+    const [selectedCategory, setSelectedCategory] = useState('total');
+    const [randomNumber, setRandomNumber] = useState(0);
+
+    useEffect(() => {
+        const generateRandomNumber = () => {
+          const min = 100;
+          const max = 3000;
+          const decimalPlaces = 2;
+          const randomNumber = (Math.random() * (max - min) + min).toFixed(decimalPlaces);
+          setRandomNumber(randomNumber);
+        };
+    
+        generateRandomNumber();
+      }, [selectedButton, selectedCategory]);
+
+    const handleButtonPress = (buttonName) => {
+        setSelectedButton(buttonName);
+    };
+
+    const handleCategoryPress = (buttonName) => {
+        setSelectedCategory(buttonName);
+    };
+
     return(
         <SafeAreaView style={styles.main_container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
@@ -34,59 +59,144 @@ export default function Profile({navigation}) {
                 <Text style={styles.header_text}>Jefferson Chen</Text>
             </View>
 
-            <View style={styles.stats_container}>
-                <Text style={styles.text_header}>Your Total Stats</Text>
-                <View style={styles.container}>
-                    <Image style={styles.stats_background} source={statsBackground}/>
-                    <Text style={styles.stats_money}>$25,402.49</Text>
-                    <Text style={styles.stats_your_spendings}>Your Spendings</Text>
-                </View>
-                <View style={styles.timing_container}>
-                    <View style={styles.box_container}>
-                        <Image source={TotalReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>125</Text>
-                        <Text style={styles.text_under}>Total</Text>
-                    </View>
-
-                    <View style={styles.box_container}>
-                        <Image source={ResolvedReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>123</Text>
-                        <Text style={styles.text_under}>Resolved</Text>
-                    </View>
-
-                    <View style={styles.box_container}>
-                        <Image source={UnresolvedReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>2</Text>
-                        <Text style={styles.text_under}>Unresolved</Text>
-                    </View>
-                </View>
-            </View>
 
             <View style={styles.stats_container}>
-                <Text style={styles.text_header}>Your Month's Stats</Text>
                 <View style={styles.monthContainer}>
                     <Image style={styles.month_stats_background} source={statsBackgroundTransparent}/>
-                    <Text style={styles.stats_money_lite}>$25,402.49</Text>
+                    <Text style={styles.stats_money_lite}>${randomNumber}</Text>
                     <Text style={styles.stats_your_spendings_lite}>Your Spendings</Text>
                 </View>
+
+                <View style={styles.buttonsContainer}>
+                <TouchableOpacity
+                    style={[
+                    styles.button,
+                    selectedButton === 'weekly' && styles.buttonSelected,
+                    ]}
+                    onPress={() => handleButtonPress('weekly')}
+                >
+                    <Text
+                        style={[
+                        styles.buttonText,
+                        selectedButton === 'weekly' && { color: '#1F1F1F' },
+                        ]}
+                    >
+                        Weekly
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={[
+                    styles.button,
+                    selectedButton === 'monthly' && styles.buttonSelected,
+                    ]}
+                    onPress={() => handleButtonPress('monthly')}
+                >
+                    <Text
+                        style={[
+                        styles.buttonText,
+                        selectedButton === 'monthly' && { color: '#1F1F1F' },
+                        ]}
+                    >
+                        Monthly
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                    style={[
+                    styles.button,
+                    selectedButton === 'yearly' && styles.buttonSelected,
+                    ]}
+                    onPress={() => handleButtonPress('yearly')}
+                >
+                    <Text
+                        style={[
+                        styles.buttonText,
+                        selectedButton === 'yearly' && { color: '#1F1F1F' },
+                        ]}
+                    >
+                        Annually
+                    </Text>
+                </TouchableOpacity>
+                </View>
+
                 <View style={styles.timing_container}>
-                    <View style={styles.box_container}>
+                    <TouchableOpacity
+                        style={[
+                        styles.cButton,
+                        selectedCategory === 'total' && styles.cbSelected,
+                        ]}
+                        onPress={() => handleCategoryPress('total')}
+                    >
                         <Image source={TotalReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>125</Text>
-                        <Text style={styles.text_under}>Total</Text>
-                    </View>
+                        <Text style={styles.cbNumber}>125</Text>
+                        <Text style={styles.cbText}>Total</Text>
+                    </TouchableOpacity>
 
-                    <View style={styles.box_container}>
-                        <Image source={ResolvedReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>123</Text>
-                        <Text style={styles.text_under}>Resolved</Text>
-                    </View>
+                    <TouchableOpacity
+                        style={[
+                        styles.cButton,
+                        selectedCategory === 'restaurant' && styles.cbSelected,
+                        ]}
+                        onPress={() => handleCategoryPress('restaurant')}
+                    >
+                        <Image source={restaurantIcon} style={styles.image_style}/> 
+                        <Text style={styles.cbNumber}>4</Text>
+                        <Text style={styles.cbText}>Restaurant</Text>
+                    </TouchableOpacity>
 
-                    <View style={styles.box_container}>
-                        <Image source={UnresolvedReceipts} style={styles.image_style}/> 
-                        <Text style={styles.number}>2</Text>
-                        <Text style={styles.text_under}>Unresolved</Text>
-                    </View>
+                    <TouchableOpacity
+                        style={[
+                        styles.cButton,
+                        selectedCategory === 'grocery' && styles.cbSelected,
+                        ]}
+                        onPress={() => handleCategoryPress('grocery')}
+                    >
+                        <Image source={groceryIcon} style={styles.image_style}/> 
+                        <Text style={styles.cbNumber}>52</Text>
+                        <Text style={styles.cbText}>Grocery</Text>
+                    </TouchableOpacity>
+
+                </View>
+
+
+                <View style={styles.timing_container}>
+                    <TouchableOpacity
+                        style={[
+                        styles.cButton,
+                        selectedCategory === 'retail' && styles.cbSelected,
+                        ]}
+                        onPress={() => handleCategoryPress('retail')}
+                    >
+                        <Image source={retailIcon} style={styles.image_style}/> 
+                        <Text style={styles.cbNumber}>52</Text>
+                        <Text style={styles.cbText}>Retail</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={[
+                        styles.cButton,
+                        selectedCategory === 'entertainment' && styles.cbSelected,
+                        ]}
+                        onPress={() => handleCategoryPress('entertainment')}
+                    >
+                        <Image source={entertainmentIcon} style={styles.image_style}/> 
+                        <Text style={styles.cbNumber}>52</Text>
+                        <Text style={styles.cbText}>Entertainment</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={[
+                        styles.cButton,
+                        selectedCategory === 'gas' && styles.cbSelected,
+                        ]}
+                        onPress={() => handleCategoryPress('gas')}
+                    >
+                        <Image source={gasIcon} style={styles.image_style}/> 
+                        <Text style={styles.cbNumber}>42</Text>
+                        <Text style={styles.cbText}>Gas</Text>
+                    </TouchableOpacity>
+
                 </View>
             </View>
                 
@@ -129,7 +239,9 @@ export default function Profile({navigation}) {
         display: "flex",
         flexDirection: "column",
         gap: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 30,
+        marginTop: 40,
     },
 
     user_image: {
@@ -368,10 +480,71 @@ export default function Profile({navigation}) {
         alignItems: "center",
         justifyContent: 'center',
         marginBottom: 10,
-    }
+    },
 
+    buttonsContainer: {
+        flexDirection: 'row',
+        marginVertical: 20,
+      },
+    
+      button: {
+        flex: 0.3,
+        alignItems: 'center',
+        borderWidth: 1,
+        borderColor: '#F7B360',
+        borderRadius: 13,
+        paddingVertical: 10,
+        marginRight: 10,
+        backgroundColor: 'transparent',
+      },
+    
+      buttonSelected: {
+        backgroundColor: '#F7B360',
+      },
+    
+      buttonText: {
+        color: '#F7B360',
+        fontSize: 12,
+        fontFamily: "Rokkitt",
+      },
 
-
+      cbContainer: {
+        flexDirection: 'row',
+        marginVertical: 20,
+      },
+  
+      cButton: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 1,
+        borderColor: '#F7B360',
+        borderRadius: 13,
+        paddingVertical: 10,
+        width: 120,
+        height: 120,
+        backgroundColor: 'transparent',
+      },
+  
+      cbSelected: {
+        opacity: 0.5,
+        color: '#000000',
+        backgroundColor: '#F7B360',
+      },
+  
+      cbNumber: {
+        fontFamily: 'Rokkitt',
+        paddingTop: 7,
+        paddingBottom: 5,
+        color: '#F1F1F1',
+        fontSize: 16,
+      },
+  
+      cbText: {
+        color: '#F1F1F1',
+        fontSize: 12,
+        fontFamily: 'Rokkitt',
+      },
 
   });
   

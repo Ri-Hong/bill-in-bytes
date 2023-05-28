@@ -201,7 +201,7 @@ export default function History({navigation}) {
         borderTopWidth: 1,
         borderTopColor: "#f1f1f1",
         height: 100,
-        backgroundColor: "#16191D"
+        backgroundColor: "#16191D",
         display: 'flex',
         flexDirection: 'row',
         position: "absolute",
