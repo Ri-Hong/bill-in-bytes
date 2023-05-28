@@ -19,7 +19,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   
   const [loaded] = useFonts({
-    Rokkitt: require('./assets/fonts/Rokkit-Medium.ttf'),
+    Rokkitt: require('./assets/fonts/static/Rokkitt-Medium.ttf'),
   });
 
   if (!loaded) {
