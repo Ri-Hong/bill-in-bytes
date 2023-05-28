@@ -1,5 +1,5 @@
 import { ScrollView } from "react-native";
-import { StyleSheet, Text, TouchableOpacity, View, Button, Image, SafeAreaView, ImageBackground } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Pressable, Button, Image, SafeAreaView, ImageBackground } from 'react-native';
 import landingPage from '../assets/landingPage.png'
 import statsBackground from '../assets/Stats.png'
 
@@ -16,7 +16,6 @@ import NavProfile from '../assets/NavProfile.png'
 import IconRetail from '../assets/IconRetail.png'
 import Vivian from '../assets/Vivian.jpeg'
 import statsBackgroundTransparent from '../assets/statsTransparent.png'
-
 
 
 export default function Profile({navigation}) {
@@ -90,8 +89,8 @@ export default function Profile({navigation}) {
                 <View style={styles.camera_container}>
                     <Image source={NavScan} style={styles.nav_icon}/>
                 </View>
-                <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
-                <Pressable onPress={() => navigation.navigate("Profile")}> <Image source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("History")}><Image source={NavHistory} style={styles.nav_icon}/></Pressable> 
+                <Pressable onPress={() => navigation.navigate("Profile")}><Image source={NavProfile} style={styles.nav_icon}/></Pressable>
 
             </View>
         </SafeAreaView>
