@@ -142,7 +142,6 @@ export default function History() {
 
     },
 
-
     nav_bar: {
 
     },

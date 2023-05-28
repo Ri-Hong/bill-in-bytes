@@ -90,7 +90,7 @@ export default function Homepage() {
                 <View style={styles.camera_container}>
                     <Pressable onPress={() => navigation.navigate("CameraScreen")}> <Image source={require('./my-icon.png')} style={styles.nav_camera}/> </Pressable>
                 </View>
-                <Pressable> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
+                <Pressable onPress={() => navigation.navigate("History")}> <Image source={require('./my-icon.png')} style={styles.nav_clock}/> </Pressable>
                 <Pressable onPress={() => navigation.navigate("Profile")}> <Image source={require('./my-icon.png')} style={styles.nav_user}/> </Pressable>
 
             </View>
