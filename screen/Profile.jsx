@@ -1,21 +1,19 @@
 import { ScrollView } from "react-native-web";
 import { StyleSheet, Text, TouchableOpacity, View, Button, Image } from 'react-native';
+import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import landingPage from '../assets/landingPage.png';
 
-export default function Homepage() {
+export default function Profile() {
     return(
         <SafeAreaView style={styles.container}>
             <ImageBackground source={landingPage} style={styles.backgroudImage}></ImageBackground>
             <View style={styles.user_container}>
                 <Image source={require('./my-icon.png')} style={styles.user_image} /> 
-                <View style={styles.user_text_container}>
-                    <Text style={styles.subheader_text}>Hey!</Text>
-                    <Text style={styles.header_text}>Jefferson Chen</Text>
-                </View>
+                <Text style={styles.header_text}>Jefferson Chen</Text>
             </View>
 
             <View style={styles.stats_container}>
-                <Text style={styles.text_header}>Your Stats</Text>
+                <Text style={styles.text_header}>Your Total Stats</Text>
                 <View style={styles.money_container}>
                     <Text style={styles.stats_money}>$25,402.49</Text>
                     <Text style={styles.stats_your_spendings}>Your Spendings</Text>
@@ -41,49 +39,34 @@ export default function Homepage() {
                 </View>
             </View>
 
-            <View style={styles.transactions_container}>
-                <Text style={styles.text_header}>Transactions</Text>
+            <View style={styles.Monthstats_container}>
+                <Text style={styles.text_header}>Your Month's Stats</Text>
                 
-
-                <View>
-                    <View style={styles.transactions_text_container}>
-                        <Image source={require('./my-icon.png')} style={styles.transactions_image}/>
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-                    
-                    <Hr></Hr>
-
-                    <View style={styles.transactions_text_container}>
-                        <Image source={require('./my-icon.png')} style={styles.transactions_image}/>
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        <Text style={styles.transactions_money}>$124.50</Text>
-                    </View>
-                    
-                    <Hr></Hr>
-                    
-                    <View style={styles.transactions_text_container}>
-                        <Image source={require('./my-icon.png')} style={styles.transactions_image}/> 
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        <Text style={styles.transactions_money}>$124.50</Text>
+                <View style={styles.monthstatsmoney_container}>
+                    <Text style={styles.monthstats_money}>$25,402.49</Text>
+                    <Text style={styles.monthstats_your_spendings}>Your Spendings</Text>
+                </View>
+                <View style={styles.timing_container}>
+                    <View style={styles.box_container}>
+                        <Image source={require('./my-icon.png')} style={styles.image_style}/> 
+                        <Text style={styles.number}>125</Text>
+                        <Text style={styles.text_under}>Total</Text>
                     </View>
 
-                    <Hr></Hr>
+                    <View style={styles.box_container}>
+                        <Image source={require('./my-icon.png')} style={styles.image_style}/> 
+                        <Text style={styles.number}>123</Text>
+                        <Text style={styles.text_under}>Resolved</Text>
+                    </View>
 
-                    <View style={styles.transactions_text_container}>
-                        <Image source={require('./my-icon.png')} style={styles.transactions_image}/>
-                        <Text style={styles.dior_text}>Dior</Text>
-                        <Text style={styles.transactions_date}>June 11, 2023</Text>
-                        <Text style={styles.transactions_money}>$124.50</Text>
+                    <View style={styles.box_container}>
+                        <Image source={require('./my-icon.png')} style={styles.image_style}/> 
+                        <Text style={styles.number}>2</Text>
+                        <Text style={styles.text_under}>Unresolved</Text>
                     </View>
                 </View>
             </View>
-
-            <Hr></Hr>
-                
+            
             <View style={styles.nav_bar}>  
                 <Pressable onPress={() => navigation.navigate("Homepage")}> <Image source={require('./my-icon.png')} style={styles.nav_home}/> </Pressable>
                 <Pressable> <Image source={require('./my-icon.png')} style={styles.nav_calendar}/> </Pressable> 
@@ -114,14 +97,6 @@ export default function Homepage() {
     user_image: {
 
     }, 
-
-    user_text_container: {
-
-    }, 
-
-    subheader_text: {
-        
-    },
 
     header_text: {
 
@@ -167,29 +142,22 @@ export default function Homepage() {
 
     },
 
-    transactions_container: {
+    Monthstats_container:{
 
     },
 
-    transactions_text_container: {
+    monthstatsmoney_container: {
 
     },
 
-    transactions_image: {
+    monthstats_money: {
 
     },
 
-    dior_text: {
+    monthstats_your_spendings: {
 
     },
 
-    transactions_date: {
-
-    },
-
-    transactions_money: {
-
-    },
 
     nav_bar: {
 
